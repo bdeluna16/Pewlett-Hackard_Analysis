@@ -20,7 +20,29 @@ The results from our analysis are as follows:
 * According to our analysis Hewlett-Packard will have to prepare to fill 90,398 roles assuming that all employees that are eligible to retire will retire.
 * In order to prepare for the upcoming "silver tsunami" Hewlett Packard will be implenting a mentorship program that will let employees who are eligible to retire instead take on a part time role where they train new/existing staff.
 * Employees who are eligible to participate in the program are empolyees who were born in the year 1965. In order to derive the number of employees who meet this requirment we wrote the queries below:
-The end result was the below (also referenced in results section above)
+``` 
+  SELECT emp_no,
+  first_name,
+  last_name,
+  birth_date,
+  from_date,
+  to_date,
+  title
+  INTO mentorship_eligibility
+  FROM mentorship_eligibility_clean
+  ORDER BY to_date DESC, emp_no
+
+```
+``` 
+SELECT COUNT(emp_no), title
+FROM mentorship_eligibility
+GROUP BY title
+ORDER BY count DESC;
+
+```
+
+* The end result was the below (also referenced in results section above)
+
 ![image](https://user-images.githubusercontent.com/67936161/91683243-f02d7c80-eb08-11ea-8ffb-865a3f79cdbb.png)
 
-Per the results it does not appear that there is enough retirement ready employees to train the next generation of employees.
+* Per the results it does not appear that there is enough retirement ready employees to train the next generation of employees.
