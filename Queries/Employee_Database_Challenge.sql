@@ -1,3 +1,49 @@
+SELECT ce.emp_no,
+ce.first_name,
+ce.last_name,
+d.dept_name
+INTO dept_info
+FROM current_emp as ce
+INNER JOIN dept_employee AS de
+ON (ce.emp_no = de.emp_no)
+INNER JOIN departments AS d
+ON (de.dept_no = d.dept_no)
+
+SELECT ce.emp_no,
+	ce.first_name,
+	ce.last_name,
+	d.dept_name
+INTO sales_retirement
+FROM current_emp as ce
+INNER JOIN dept_employee as de
+ON (ce.emp_no = de.emp_no)
+INNER JOIN departments as d
+ON (de.dept_no = d.dept_no )
+WHERE dept_name IN ('Sales');
+
+SELECT * FROM sales_retirement
+
+
+SELECT ce.emp_no,
+	ce.first_name,
+	ce.last_name,
+	d.dept_name
+INTO sales_development_retirement
+FROM current_emp as ce
+INNER JOIN dept_employee as de
+ON (ce.emp_no = de.emp_no)
+INNER JOIN departments as d
+ON (de.dept_no = d.dept_no )
+WHERE dept_name IN ('Sales', 'Development')
+ORDER BY dept_name;
+
+SELECT * FROM sales_development_retirement
+
+SELECT COUNT(emp_no), dept_name
+FROM sales_development_retirement
+GROUP BY dept_name
+ORDER BY count DESC; 
+
 SELECT e.emp_no,
 		e.first_name,
 		e.last_name,
