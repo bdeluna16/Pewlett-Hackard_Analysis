@@ -9,10 +9,12 @@ With our analysis Pewlett-Hackard plans to gain better insight on how to adjust 
 The results from our analysis are as follows:
 1. The list below shows the number of employees that will be retiring for each title within the company. We can see that the highest number of employees that are retiring are Senior Engineers and Senior staff.
 2. Hewlett-Packard should focus on recruiting new engineers as well as promoting the existing engineers in order to fill the vacancies that will come.
+
 ![image](https://user-images.githubusercontent.com/67936161/91682614-fcb0d580-eb06-11ea-8e8d-1e72d2a90cd4.png)
 
 3. The list below shows the number of employees that are eligible to participate in the mentorship program broken down by title. 
 4. As you can see the number of eligible employees that can participate in the mentorship program is significantly lower than the number of employees that are retiring in the respective roles.
+
 ![image](https://user-images.githubusercontent.com/67936161/91683243-f02d7c80-eb08-11ea-8ffb-865a3f79cdbb.png)
 
 ## Summary
